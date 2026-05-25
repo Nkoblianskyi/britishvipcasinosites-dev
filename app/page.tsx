@@ -81,7 +81,7 @@ export default function Home() {
                         style={{ backgroundColor: "hsl(43,90%,50%)" }}
                       />
                       <span className="text-[9px] font-sans font-bold tracking-[0.22em] uppercase text-accent">
-                        UK VIP Casino Comparison 2025
+                        UK VIP Casino Comparison 2026
                       </span>
                     </div>
 
@@ -195,7 +195,7 @@ export default function Home() {
               <div className="flex flex-col items-center text-center mb-10 md:mb-14">
                 <div className="stripe-tricolor w-16 rounded-full mb-5" style={{ height: "3px" }} />
                 <h2 className="font-serif font-bold text-2xl md:text-4xl text-foreground text-balance mb-3">
-                  How to Choose the Best<br className="hidden md:block" /> UK VIP Casino in 2025
+                  How to Choose the Best<br className="hidden md:block" /> UK VIP Casino in 2026
                 </h2>
                 <p className="text-sm text-muted-foreground leading-relaxed max-w-lg font-sans">
                   Everything you need to know before depositing — from UKGC regulation to bonus terms and payout speeds.

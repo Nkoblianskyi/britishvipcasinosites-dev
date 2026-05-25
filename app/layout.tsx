@@ -20,11 +20,11 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "British VIP Casino Sites | Best UK Casino Sites 2025 | britishvipcasinosites.com",
+  title: "British VIP Casino Sites | Best UK Casino Sites 2026 | britishvipcasinosites.com",
   description:
     "The UK's premier VIP casino comparison platform. Expert reviews, exclusive bonuses, and the top UKGC-licensed casinos verified by our editorial team at britishvipcasinosites.com.",
   keywords:
-    "british vip casino sites, best UK casinos 2025, UK casino comparison, UKGC licensed casinos, VIP casino bonuses, britishvipcasinosites",
+    "british vip casino sites, best UK casinos 2026, UK casino comparison, UKGC licensed casinos, VIP casino bonuses, britishvipcasinosites",
 }
 
 export const viewport: Viewport = {
