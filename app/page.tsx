@@ -195,7 +195,7 @@ export default function Home() {
               <div className="flex flex-col items-center text-center mb-10 md:mb-14">
                 <div className="stripe-tricolor w-16 rounded-full mb-5" style={{ height: "3px" }} />
                 <h2 className="font-serif font-bold text-2xl md:text-4xl text-foreground text-balance mb-3">
-                  How to Choose <br className="hidden md:block" /> British Vip Casino Sites in 2026
+                  How to Choose the Best<br className="hidden md:block" /> British Vip Casino Sites in 2026
                 </h2>
                 <p className="text-sm text-muted-foreground leading-relaxed max-w-lg font-sans">
                   Everything you need to know before depositing - from UKGC regulation to bonus terms and payout speeds.
