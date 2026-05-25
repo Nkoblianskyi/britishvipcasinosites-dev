@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* British VIP Casino Sites — Gold · Green · Blue Premium Theme */
+@layer base {
+  :root {
+    --font-sans: var(--font-inter);
+    --font-display: var(--font-playfair);
+
+    /* Core backgrounds — deep navy-black */
+    --background: 222 42% 7%;
+    --foreground: 43 55% 92%;
+
+    --card: 222 36% 11%;
+    --card-foreground: 43 55% 92%;
+
+    --popover: 222 36% 11%;
+    --popover-foreground: 43 55% 92%;
+
+    /* Deep navy primary */
+    --primary: 224 44% 5%;
+    --primary-foreground: 43 55% 92%;
+
+    /* Mid-navy secondary */
+    --secondary: 222 32% 15%;
+    --secondary-foreground: 43 55% 92%;
+
+    --muted: 222 28% 19%;
+    --muted-foreground: 222 18% 52%;
+
+    /* Gold accent (primary brand color) */
+    --accent: 43 90% 50%;
+    --accent-foreground: 224 44% 5%;
+
+    /* Royal blue */
+    --blue: 217 82% 50%;
+    --blue-light: 217 82% 66%;
+    --blue-dim: 217 55% 24%;
+
+    /* Emerald green */
+    --green: 148 60% 38%;
+    --green-light: 148 60% 52%;
+    --green-dim: 148 40% 18%;
+
+    --destructive: 0 65% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 30% 18%;
+    --input: 222 32% 15%;
+    --ring: 43 90% 50%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 224 44% 5%;
+    --sidebar-foreground: 43 55% 92%;
+    --sidebar-primary: 43 90% 50%;
+    --sidebar-primary-foreground: 224 44% 5%;
+    --sidebar-accent: 222 36% 11%;
+    --sidebar-accent-foreground: 43 55% 92%;
+    --sidebar-border: 222 30% 18%;
+    --sidebar-ring: 43 90% 50%;
+
+    /* Named tokens */
+    --gold: 43 90% 50%;
+    --gold-light: 43 90% 66%;
+    --gold-dim: 43 48% 24%;
+
+    --navy: 224 44% 5%;
+    --navy-mid: 222 36% 11%;
+    --navy-light: 222 32% 17%;
+    --section-alt: 222 38% 9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply bg-background;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+  }
+}
+
+/* ── Section helpers ── */
+.section-navy     { background-color: hsl(var(--navy)); }
+.section-alt      { background-color: hsl(var(--section-alt)); }
+.section-mid      { background-color: hsl(var(--navy-mid)); }
+.section-green    { background-color: hsl(var(--green-dim)); }
+.section-blue     { background-color: hsl(var(--blue-dim)); }
+
+/* ── Decorative rules ── */
+.rule-gold {
+  height: 1px;
+  background: linear-gradient(to right, transparent, hsl(var(--gold)), transparent);
+}
+.rule-green {
+  height: 1px;
+  background: linear-gradient(to right, transparent, hsl(var(--green)), transparent);
+}
+.rule-tricolor {
+  height: 2px;
+  background: linear-gradient(90deg, hsl(var(--gold)) 0%, hsl(var(--green)) 50%, hsl(var(--blue)) 100%);
+}
+
+/* ── Tricolor accent stripe ── */
+.stripe-tricolor {
+  background: linear-gradient(90deg,
+    hsl(var(--gold))  0%,
+    hsl(var(--gold))  33.3%,
+    hsl(var(--green)) 33.3%,
+    hsl(var(--green)) 66.6%,
+    hsl(var(--blue))  66.6%,
+    hsl(var(--blue))  100%
+  );
+  height: 4px;
+}
+
+/* ── Card glow ── */
+.card-glow {
+  box-shadow: 0 0 0 1px hsl(var(--gold) / 0.10), 0 4px 28px hsl(var(--blue) / 0.08);
+  transition: box-shadow 0.25s ease;
+}
+.card-glow:hover {
+  box-shadow: 0 0 0 1px hsl(var(--gold) / 0.28), 0 8px 40px hsl(var(--blue) / 0.15);
+}
+.card-glow-green {
+  box-shadow: 0 0 0 1px hsl(var(--green) / 0.20), 0 4px 28px hsl(var(--green) / 0.08);
+  transition: box-shadow 0.25s ease;
+}
+.card-glow-green:hover {
+  box-shadow: 0 0 0 1px hsl(var(--green) / 0.40), 0 8px 40px hsl(var(--green) / 0.15);
+}
+
+/* ── Rank badge colors ── */
+.rank-gold  { background: linear-gradient(135deg, hsl(43 90% 46%), hsl(43 90% 62%)); color: hsl(224 44% 5%); }
+.rank-green { background: linear-gradient(135deg, hsl(148 60% 33%), hsl(148 60% 48%)); color: #fff; }
+.rank-blue  { background: linear-gradient(135deg, hsl(217 82% 44%), hsl(217 82% 58%)); color: #fff; }
+
+/* ── Score badge ── */
+.score-ring {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-inter);
+  border: 2px solid hsl(var(--gold) / 0.50);
+  background: hsl(var(--gold-dim));
+  color: hsl(var(--gold-light));
+}
+
+/* ── Animations ── */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+.animate-fade-in    { animation: fade-in    0.55s ease-out both; }
+.animate-fade-in-up { animation: fade-in-up 0.55s ease-out both; }
+.animate-slide-up   { animation: slide-up   0.4s  ease-out both; }
+.animate-scale-in   { animation: scale-in   0.3s  ease-out both; }
+
+/* ── Gold shimmer text ── */
+.gold-shimmer {
+  background: linear-gradient(90deg,
+    hsl(var(--gold)) 0%,
+    hsl(var(--gold-light)) 50%,
+    hsl(var(--gold)) 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Green shimmer text ── */
+.green-shimmer {
+  background: linear-gradient(90deg,
+    hsl(var(--green)) 0%,
+    hsl(var(--green-light)) 50%,
+    hsl(var(--green)) 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── CTA button variants ── */
+.btn-gold {
+  background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+  color: hsl(var(--navy));
+  font-weight: 700;
+  border-radius: var(--radius);
+  transition: filter 0.2s ease, transform 0.15s ease;
+}
+.btn-gold:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.btn-green {
+  background: linear-gradient(135deg, hsl(var(--green)), hsl(var(--green-light)));
+  color: #fff;
+  font-weight: 700;
+  border-radius: var(--radius);
+  transition: filter 0.2s ease, transform 0.15s ease;
+}
+.btn-green:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.btn-blue {
+  background: linear-gradient(135deg, hsl(var(--blue)), hsl(var(--blue-light)));
+  color: #fff;
+  font-weight: 700;
+  border-radius: var(--radius);
+  transition: filter 0.2s ease, transform 0.15s ease;
+}
+.btn-blue:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+/* ── Policy / info page helpers ── */
+.policy-card {
+  background: hsl(var(--navy-mid));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+.policy-card:hover {
+  border-color: hsl(var(--gold) / 0.35);
+}
+.toc-link {
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.toc-link:hover {
+  color: hsl(var(--gold));
+}
+
+/* Footer nav link hover (pure CSS — no JS event handlers) */
+.footer-nav-link {
+  color: hsl(var(--muted-foreground));
+}
+.footer-nav-link:hover {
+  color: hsl(var(--gold));
+}
