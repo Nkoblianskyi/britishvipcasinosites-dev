@@ -64,7 +64,7 @@ function StarRating({ rating, size = "md", accentColor }: { rating: number; size
 }
 
 // Circular score badge
-function ScoreBadge({ score, color }: { score: number; color: string }) {
+function ScoreBadge({ score, color, textColor }: { score: number; color: string; textColor?: string }) {
   return (
     <div
       className="flex flex-col items-center justify-center rounded-full shrink-0"
@@ -75,10 +75,15 @@ function ScoreBadge({ score, color }: { score: number; color: string }) {
         backgroundColor: `${color}10`,
       }}
     >
-      <span className="font-sans font-bold text-base leading-none" style={{ color }}>
+      <span className="font-sans font-bold text-base leading-none" style={{ color: textColor ?? color }}>
         {score.toFixed(1)}
       </span>
-      <span className="font-sans text-[8px] text-muted-foreground leading-none mt-0.5">/10</span>
+      <span
+        className="font-sans text-[8px] leading-none mt-0.5"
+        style={textColor ? { color: textColor, opacity: 0.7 } : undefined}
+      >
+        /10
+      </span>
     </div>
   )
 }
@@ -218,7 +223,7 @@ export function BettingSitesList() {
                   {/* Row 2: Score | CTA */}
                   <div className="flex items-stretch" style={{ minHeight: "60px" }}>
                     <div className="flex-1 flex items-center gap-3 px-4 py-3">
-                      <ScoreBadge score={site.score} color={cfg.accentColor} />
+                      <ScoreBadge score={site.score} color={cfg.accentColor} textColor="#000" />
                       <div className="flex flex-col gap-1">
                         <StarRating rating={site.score} size="sm" accentColor={cfg.accentColor} />
                         <span className="text-[8px] text-muted-foreground font-sans">{site.reviews.toLocaleString()} reviews</span>
