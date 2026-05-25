@@ -223,7 +223,7 @@ export function BettingSitesList() {
                   {/* Row 2: Score | CTA */}
                   <div className="flex items-stretch" style={{ minHeight: "60px" }}>
                     <div className="flex-1 flex items-center gap-3 px-4 py-3">
-                      <ScoreBadge score={site.score} color={cfg.accentColor} textColor="#000" />
+                      <ScoreBadge score={site.score} color={cfg.accentColor} textColor="#fff" />
                       <div className="flex flex-col gap-1">
                         <StarRating rating={site.score} size="sm" accentColor={cfg.accentColor} />
                         <span className="text-[8px] text-muted-foreground font-sans">{site.reviews.toLocaleString()} reviews</span>
