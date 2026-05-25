@@ -211,7 +211,7 @@ export function BettingSitesList() {
                     </div>
                     <div className="flex-1 flex flex-col items-center justify-center px-3 py-3 gap-0.5">
                       <p className="text-[8px] font-sans font-bold tracking-[0.2em] uppercase text-muted-foreground">Welcome Bonus</p>
-                      <p className="font-serif font-bold text-sm leading-snug text-center" style={{ color: cfg.accentColor }}>
+                      <p className="font-serif font-bold text-lg leading-snug text-center" style={{ color: cfg.accentColor }}>
                         {site.bonus}
                       </p>
                       <p className="text-[9px] font-sans font-semibold text-center leading-tight" style={{ color: `${cfg.accentColor}aa` }}>
