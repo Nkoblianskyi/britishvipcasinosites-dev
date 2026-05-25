@@ -43,6 +43,13 @@ const tools = [
 
 const organisations = [
   {
+    name: "UK Gambling Commission",
+    description: "The official regulator of all gambling in Great Britain. Verifies licences, enforces standards, and protects consumers.",
+    href: "https://www.gamblingcommission.gov.uk/",
+    logo: "/Gambling_Commission_logo.png",
+    color: "hsl(0,72%,55%)",
+  },
+  {
     name: "BeGambleAware",
     description: "Free, confidential advice and support 24/7. Call the National Gambling Helpline on 0808 8020 133.",
     href: "https://www.begambleaware.org/",
